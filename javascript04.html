@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 : 데이터 제어하기</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dracula.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <h1><a href="index.html">Javascript</a></h1>
+      <nav class="header_nav">
+        <ul>
+          <li>
+            <a href="javascript01.html">데이터 저장하기</a>
+          </li>
+          <li><a href="javascript02.html">데이터 불러오기</a></li>
+          <li><a href="javascript03.html">데이터 실행하기</a></li>
+          <li class="active"><a href="javascript04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+          <li><a href="javascript05.html">문자열 객체</a></li>
+          <li><a href="javascript06.html">배열 객체</a></li>
+          <li><a href="javascript07.html">수학 객체</a></li>
+          <li><a href="javascript08.html">숫자 객체</a></li>
+          <li><a href="javascript09.html">브라우저 객체</a></li>
+          <li><a href="javascript10.html">요소 객체</a></li>
+          <li><a href="javascript11.html">이벤트 객체</a></li>
+          <li><a href="javascript12.html">제이쿼리</a></li>
+        </ul>
+        <ul class="effect">
+          <li><a href="effect/searchEffect.html">검색 효과</a></li>
+          <li><a href="effect/quizEffect.html">퀴즈 효과</a></li>
+          <li><a href="effect/dataEffect.html">데이터 효과</a></li>
+          <li><a href="effect/mouseEffect.html">마우스 효과</a></li>
+          <li><a href="effect/sliderEffect.html">슬라이드 효과</a></li>
+          <li><a href="effect/parallaxEffect.html">패랠랙스 효과</a></li>
+          <li><a href="effect/gameEffect.html">게임 효과</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <div class="container">
+        <div class="main_menu">
+          <ul>
+            <li><a href="#sample01">01. if문</a></li>
+            <li>
+              <a href="#sample02">02. if문 생략</a>
+            </li>
+            <li>
+              <a href="#sample03">03. 다중 if문</a>
+            </li>
+            <li>
+              <a href="#sample04">04. 중첩 if문</a>
+            </li>
+            <li>
+              <a href="#sample05">05. 삼항 연산자</a>
+            </li>
+            <li>
+              <a href="#sample06">06. switch문</a>
+            </li>
+            <li>
+              <a href="#sample07">07. while문</a>
+            </li>
+            <li>
+              <a href="#sample08">08. do while문</a>
+            </li>
+            <li>
+              <a href="#sample09">09. for문</a>
+            </li>
+            <li>
+              <a href="#sample10">10. 중첩 for문</a>
+            </li>
+            <li>
+              <a href="#sample11">11. break문</a>
+            </li>
+            <li>
+              <a href="#sample12"
+                >12. continue문</a
+              >
+            </li>
+            
+            
+          </ul>
+        </div>
+        <div class="main_sample">
+          <div id="sample01" class="sample">
+            <h3>01. if문</h3>
+            <p></p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    //true, false, 1, 0, "1", "0", null, undefined, [], {}
+    if(true){
+        document.write("살행되었습니다.(true)"); 
+        } else {
+            document.write("실행되었습니다.(false)")
+        }
+
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample01_result">
+                    실행되었습니다.(true)
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample01 -->
+
+          <div id="sample02" class="sample">
+            <h3>02. if문 생략</h3>
+            <p>
+             
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    const num = 100;
+
+    if(num == 100) document.write("실행되었습니다.(true)");
+    else document.write("실행되었습니다.(false)");
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample02_result">
+                    실행되었습니다.(true)
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample02 -->
+
+          <div id="sample03" class="sample">
+            <h3>03. 다중 if문</h3>
+            <p>
+              
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    const num = 100;
+
+    if(num == 90){
+                document.write("실행되었습니다.(num==90)");
+    } else if (num == 100){
+                document.write("실행되었습니다.(num==100)");
+    } else if (num == 110){
+                document.write("실행되었습니다.(num==110)");
+    } else if (num == 120){
+                document.write("실행되었습니다.(num==120)");
+    } else {
+                document.write("실행되었습니다.(num==값이없음)");
+    }
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample03_result">
+                    실행되었습니다.(num==100)
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample03 -->
+
+          <div id="sample04" class="sample">
+            <h3>04. 중첩 if문</h3>
+            <p>
+              
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    const num = 100;
+
+    if(num == 100){
+        document.write("실행되었습니다.(1)");
+        if(num == 100){
+            document.write("실행되었습니다.(2)");
+            if(num == 100){
+                document.write("실행되었습니다.(3)");
+            }
+        }
+    } else {
+        document.write("실행되었습니다.(4)");
+    }
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample04_result">
+                    실행되었습니다.(1) <br>
+                    실행되었습니다.(2) <br>
+                    실행되었습니다.(3) <br>
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample04 -->
+
+          <div id="sample05" class="sample">
+            <h3>05. 삼항 연산자(조건부 연산자)</h3>
+            <p>
+              
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    const num = 100;
+
+    //if(num == 100){
+    //    document.write("true");
+    //} else {
+    //    document.write("false");
+    //}
+
+    (num == 100) ? document.write("true") : document.write("false");
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample05_result">
+                    true
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample05 -->
+
+          <div id="sample06" class="sample">
+            <h3>06. switch문</h3>
+            <p>
+              
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    const num = 100;
+
+    switch(num){
+        case 100 :
+            document.write("실행되었습니다(num==100)");
+        break;
+        case 200 :
+            document.write("실행되었습니다(num==200)");
+        break;
+        case 300 :
+            document.write("실행되었습니다(num==300)");
+        break;
+        case 400 :
+            document.write("실행되었습니다(num==400)");
+        break;
+        default :
+            document.write("실행되었습니다.(num==값이없음");
+    }
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample06_result">
+                    실행되었습니다(num==100)
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample06 -->
+
+          <div id="sample07" class="sample">
+            <h3>07. while문</h3>
+            <p>
+              
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    let num = 1;
+
+    while(num < = 5){
+        document.write(num + ". 실행되었습니다.");
+        num++;
+    }
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample07_result">
+                    1. 실행되었습니다. <br>
+2. 실행되었습니다. <br>
+3. 실행되었습니다. <br>
+4. 실행되었습니다. <br>
+5. 실행되었습니다. <br>
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample07 -->
+
+          <div id="sample08" class="sample">
+            <h3>08. do while문</h3>
+            <p>
+              
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    let num = 1;
+
+    do {
+        document.write(num + ". 실행되었습니다.");
+        num++;
+    } while (num < = 5)
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample08_result">
+                    1. 실행되었습니다. <br>
+2. 실행되었습니다. <br>
+3. 실행되었습니다. <br>
+4. 실행되었습니다. <br>
+5. 실행되었습니다. <br>
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample08 -->
+
+          <div id="sample09" class="sample">
+            <h3>09. for문</h3>
+            <p>
+              
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    for(let i=1; i < =5; i++){
+        document.write(i + ". 실행되었습니다.");
+    }
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample09_result">
+                    1. 실행되었습니다. <br>
+2. 실행되었습니다. <br>
+3. 실행되었습니다. <br> 
+4. 실행되었습니다. <br>
+5. 실행되었습니다. <br>
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample09 -->
+
+          <div id="sample10" class="sample">
+            <h3>10. 중첩 for문</h3>
+            <p>
+             
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    for(let i=1; i<=2; i++){
+        document.write(i + ". 실행(i)되었습니다.");
+        for(let j=1; j<=3; j++){
+            document.write(j + ". 실행(j)되었습니다.");
+        }
+    }
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample10_result">
+                    1. 실행(i)되었습니다. <br>
+
+1. 실행(j)되었습니다.<br>
+2. 실행(j)되었습니다.<br>
+3. 실행(j)되었습니다.<br>
+<br>
+2. 실행(i)되었습니다.<br>
+<br>
+1. 실행(j)되었습니다.<br>
+2. 실행(j)되었습니다.<br>
+3. 실행(j)되었습니다.
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample10 -->
+
+          <div id="sample11" class="sample">
+            <h3>11. break문</h3>
+            <p>
+              
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    let num = 1;
+    while(num < = 20){
+        document.write(num);
+        if(num == 10){
+            break;
+        }
+        num++;
+    }
+    
+    //for문을 이용해서 0~20 출력
+    for(let i = 1; i < = 20; i++){
+        document.write(i);
+        if(i == 10){
+            break;
+        }
+    }
+
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample11_result">
+                    1 2 3 4 5 6 7 8 9 10 <br>
+1 2 3 4 5 6 7 8 9 10
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample11 -->
+
+          <div id="sample12" class="sample">
+            <h3>12. continue문</h3>
+            <p>
+             
+            </p>
+            <div class="script">
+              <pre><code lang="language-js">{
+    let num = 0;
+    while(num < 10){
+        num++;
+        if ( num == 5){
+            continue;
+        }
+        document.write(num);
+    }
+
+    for(let i = 1; i<=10; i++){
+        if( i == 5){
+            continue;
+        }
+        document.write(i);
+    }
+
+}
+</code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과 보기</summary>
+                <div class="sample12_result">
+1 2 3 4 6 7 8 9 10 <br>
+1 2 3 4 6 7 8 9 10
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- sample12 -->
+
+ 
+
+      </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+      <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script>
+    //   // 01
+    //   {
+    //     let x =100, y=200, z="javascript";
+
+    //     //document.write(x);
+    //     //document.write(y);
+    //     //document.write(z);
+
+    //     document.querySelector(".sample01_result").innerHTML =
+    //       x + "<br>" + y + "<br>" + z;
+    //   }
+
+    //   // 02
+    //   {
+    //     const x=100, y=200, z="javascript"
+
+    //     //document.write(x);
+    //     //document.write(y);
+    //     //document.write(z);
+
+    //     document.querySelector(".sample02_result").innerHTML =
+    //       x + "<br>" + y + "<br>" + z;
+    //   }
+
+    //   // 03
+    //   {
+    //     let x = 100;
+    //     let y = 200;
+    //     let z = "javascript";
+
+    //     x += 300; // 변수 x의 값에 300을 추가 (x+300)
+    //     y += 400; // 변수 y의 값에 400을 추가 (y+400)
+    //     z += "jquery"; // 변수 z의 값에 문자열 "jquery"를 추가 (z+"jquery")
+
+    //     //document.write(x);
+    //     //document.write(y);
+    //     //document.write(z);
+
+    //     document.querySelector(".sample03_result").innerHTML =
+    //       x + "<br>" + y + "<br>" + z;
+    //   }
+
+    //   // 04
+    //   {
+    //     let x1 = 100; // 전역변수
+    //     let y1 = 200;
+
+    //     function func() {
+    //       let x1 = 100; // 지역변수
+    //       let z1 = "javascript"; // 지역변수
+
+    //       x1 = 200; // 지역변수 100 --> 200
+    //       y1 = 300; // 전역변수 200 --> 300
+
+    //       // document.write("함수 안<br>");
+    //       // document.write(x1, "<br>");
+    //       // document.write(y1, "<br>");
+    //       // document.write(z1, "<br>");
+    //     }
+    //     func();
+
+    //     // document.write("<br>함수 밖<br>");
+    //     // document.write(x1, "<br>");
+    //     // document.write(y1, "<br>");
+    //     // document.write(z1); // undifined // null
+    //   }
+
+    //   // 05
+    //   {
+    //     const x = 100;
+    //     const y = 200;
+    //     const z = "javascript";
+
+    //     //x = 300;      // 변경할 수 없음
+    //     //x = 400;
+    //     //x = "jquery";
+
+    //     // document.write(arr[0]);
+    //     // document.write(arr[1]);
+    //     // document.write(arr[2]);
+
+    //     document.querySelector(".sample05_result").innerHTML =
+    //       x + "<br>" + y + "<br>" + z;
+    //   }
+
+    //   // 06
+    //   {
+    //     const arr = new Array();
+    //     arr[0] = 100;
+    //     arr[1] = 200;
+    //     arr[2] = "javascript";
+
+    //     // document.write(arr[0]);
+    //     // document.write(arr[1]);
+    //     // document.write(arr[2]);
+
+    //     document.querySelector(".sample06_result").innerHTML =
+    //       arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+    //   }
+
+    //   // 07
+    //   {
+    //     const arr = new Array(100, 200, "javascript");
+
+    //     // document.write(arr[0]);
+    //     // document.write(arr[1]);
+    //     // document.write(arr[2]);
+
+    //     document.querySelector(".sample07_result").innerHTML =
+    //       arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+    //   }
+
+    //   // 08
+    //   {
+    //     const arr = [];
+    //     arr[0] = 100;
+    //     arr[1] = 200;
+    //     arr[2] = "javascript";
+
+    //     // document.write(arr[0]);
+    //     // document.write(arr[1]);
+    //     // document.write(arr[2]);
+
+    //     document.querySelector(".sample08_result").innerHTML =
+    //       arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+    //   }
+
+    //   // 09
+    //   {
+    //     const arr = [100, 200, "javascript"];
+
+    //     // document.write(arr[0]);
+    //     // document.write(arr[1]);
+    //     // document.write(arr[2]);
+
+    //     document.querySelector(".sample09_result").innerHTML =
+    //       arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+    //   }
+
+    //   // 10
+    //   {
+    //     const obj = new Object();
+    //     obj[0] = 100;
+    //     obj[1] = 200;
+    //     obj[2] = "javascript";
+
+    //     // document.write(obj[0]);
+    //     // document.write(obj[1]);
+    //     // document.write(obj[2]);
+
+    //     document.querySelector(".sample10_result").innerHTML =
+    //       obj[0] + "<br>" + obj[1] + "<br>" + obj[2];
+    //   }
+
+    //   // 11
+    //   {
+    //     const obj = new Object();
+    //     obj.a = 100;
+    //     obj.b = 200;
+    //     obj.c = "javascript";
+
+    //     // document.write(obj.a);
+    //     // document.write(obj.b);
+    //     // document.write(obj.c);
+
+    //     document.querySelector(".sample11_result").innerHTML =
+    //       obj.a + "<br>" + obj.b + "<br>" + obj.c;
+    //   }
+
+    //   // 12
+    //   {
+    //     const obj = {};
+    //     obj.a = 100;
+    //     obj.b = 200;
+    //     obj.c = "javascript";
+
+    //     // document.write(obj.a);
+    //     // document.write(obj.b);
+    //     // document.write(obj.c);
+
+    //     document.querySelector(".sample12_result").innerHTML =
+    //       obj.a + "<br>" + obj.b + "<br>" + obj.c;
+    //   }
+
+    //   // 13
+    //   {
+    //     const obj = { a: 100, b: 200, c: "javascript" };
+
+    //     // document.write(obj.a);
+    //     // document.write(obj.b);
+    //     // document.write(obj.c);
+
+    //     document.querySelector(".sample13_result").innerHTML =
+    //       obj.a + "<br>" + obj.b + "<br>" + obj.c;
+    //   }
+
+    //   // 14 객체 : 배열 속의 객체
+    //   {
+    //     const obj = [{ a: 100, b: 200 }, { c: "javascript" }];
+
+    //     // document.write(obj[0].a);
+    //     // document.write(obj[0].b);
+    //     // document.write(obj[1].c);
+
+    //     document.querySelector(".sample14_result").innerHTML =
+    //       obj[0].a + "<br>" + obj[0].b + "<br>" + obj[1].c;
+    //   }
+
+    //   // 15 객체 : 객체 속의 배열
+    //   {
+    //     const obj = {
+    //       a: 100,
+    //       b: [200, 300],
+    //       c: { x: 400, y: 500 },
+    //       d: "javascript",
+    //     };
+
+    //     // document.write(obj.a);
+    //     // document.write(obj.b[0]);
+    //     // document.write(obj.b[1]);
+    //     // document.write(obj.c.x);
+    //     // document.write(obj.c.y);
+    //     // document.write(obj.d);
+
+    //     document.querySelector(".sample15_result").innerHTML =
+    //       obj.a +
+    //       "<br>" +
+    //       obj.b[0] +
+    //       "<br>" +
+    //       obj.b[1] +
+    //       "<br>" +
+    //       obj.c.x +
+    //       "<br>" +
+    //       obj.c.y +
+    //       "<br>" +
+    //       obj.d;
+    //   }
+
+    //   // 16 객체 : 객체 속의 변수
+    //   {
+    //     const a = 100;
+    //     const b = 200;
+    //     const c = "javascript";
+
+    //     const obj = { a, b, c };
+
+    //     // document.write(obj.a);
+    //     // document.write(obj.b);
+    //     // document.write(obj.c);
+
+    //     document.querySelector(".sample16_result").innerHTML =
+    //       obj.a + "<br>" + obj.b + "<br>" + obj.c;
+    //   }
+
+    //   // 17 객체 : 객체 속의 함수
+    //   {
+    //     const obj = {
+    //       a: 100,
+    //       b: [200, 300],
+    //       c: { x: 400, y: 500 },
+    //       d: "javascript",
+    //       e: function () {
+    //         document.write("자바스크립트가 실행되었습니다.");
+    //       },
+    //       f: function () {
+    //         document.write(obj.d + "가 실행되었습니다.");
+    //       },
+    //       g: function () {
+    //         document.write(this.d + "가 실행되었습니다.");
+    //       },
+    //     };
+
+    //     // document.write(obj.a);
+    //     // document.write(obj.b[0]);
+    //     // document.write(obj.b[1]);
+    //     // document.write(obj.b);
+    //     // document.write(obj.c.x);
+    //     // document.write(obj.c.y);
+    //     // document.write(obj.c);
+    //     // obj.e();
+    //     // obj.f();
+    //     // obj.g();
+    //   }
+    </script>
+  </body>
+</html>
